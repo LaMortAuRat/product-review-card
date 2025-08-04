@@ -1,0 +1,161 @@
+:root {
+  --main-green: hsl(158, 36%, 37%);
+  --active-green: hsl(158, 42%, 18%);
+  --black: hsl(212, 21%, 14%);
+  --grey: hsl(228, 12%, 48%);
+  --cream: hsl(30, 38%, 92%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: clamp(6px, 0.5vw + 0.3rem, 18px);
+}
+
+body {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: var(--cream);
+}
+
+main {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  max-height: 50rem;
+  width: 100%;
+  max-width: 50rem;
+  border-radius: 0.8rem;
+}
+
+.mainL {
+  max-height: 100%;
+  width: 50%;
+}
+
+.main-img {
+  height: 100%;
+  width: 100%;
+  border-top-left-radius: 0.8rem;
+  border-bottom-left-radius: 0.8rem;
+  object-fit: cover;
+}
+
+.mainR {
+  padding: 1.4rem 2rem;
+  width: 50%;
+}
+
+.product-name {
+  font-family: 'Fraunces';
+  font-weight: 700;
+  font-size: 2.7rem;
+  max-width: 20rem;
+}
+
+.product-type {
+  font-family: 'Montserrat';
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+}
+
+.product-desc {
+  font-family: 'Montserrat';
+  max-width: 35rem;
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+
+.product-price {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.price-reduction {
+  font-family: 'Fraunces';
+  color: var(--main-green);
+  font-weight: 700;
+  font-size: 2.8rem;
+  margin: 0 1.5rem 0 0;
+}
+
+.price-no-reduction {
+  font-family: 'Montserrat';
+  color: black;
+  text-decoration: line-through;
+  text-decoration-thickness: 1px;
+  text-decoration-color: var(--black);
+}
+
+.add-to-cart-btn {
+  text-align: center;
+  background-color: var(--main-green);
+  border: none;
+  border-radius: 1rem;
+  color: white;
+  font-weight: 500;
+  font-size: 1.1rem;
+  font-family: 'Montserrat';
+  width: 100%;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: center;
+  transition: background-color 0.15s;
+}
+
+.cart-icon {
+  margin-right: 1.2rem;
+}
+
+.add-to-cart-btn:hover {
+  background-color: var(--active-green);
+  cursor: pointer;
+}
+
+.attribution {
+  font-family: 'Montserrat';
+  position: fixed;
+  top: 0;
+}
+
+@media (max-width: 700px) {
+  body {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  main {
+    flex-direction: column;
+    background-color: white;
+    max-height: 100rem; 
+    }
+
+  .mainR {
+    width: 100%;
+    background-color: white;
+    height: 70%;
+    padding: 0 5rem 5rem 5rem;
+    }
+
+  .mainL {
+    width: 100%;
+    background-color: white;
+    height: 30%;
+  }
+
+  .main-img {
+    height: 90%; 
+    width: 100%;
+    border-top-left-radius: 0.8rem;
+    border-top-right-radius: 0.8rem;
+    border-bottom-left-radius: 0;
+  }
+}
